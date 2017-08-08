@@ -1,16 +1,17 @@
 /*global angular*/
 
 (function(){
-    var MeanController = function($scope){
-        $scope.name = 'Bill';
-        $scope.number = 0;
+    var MeanController = function(){
+        var vm = this;
+        vm.name = 'Bill';
+        vm.number = 0;
         
-        $scope.increment = function(){
-            $scope.number = $scope.number + 1;
+        vm.increment = function(){
+            vm.number = vm.number + 1;
         };
         
-        $scope.decrement = function(){
-            $scope.number = $scope.number -1;
+        vm.decrement = function(){
+            vm.number = vm.number -1;
         };
     };
     

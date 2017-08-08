@@ -7,12 +7,19 @@
         <link rel="stylesheet" href="./public/stylesheets/app.css">
     </head>
     <body>
-        <div class="container" ng-controller="MeanController">
-            <h2 ng-cloak>{{ number }}</h2>
+        <div class="container" ng-controller="MeanController as ctrl">
+            <h2 ng-cloak>{{ ctrl.number }}</h2>
             <br>
-            <button ng-click="increment()"> +1</button>
-            <button ng-click="decrement()"> -1</button>
+            <button ng-click="ctrl.increment()"> +1</button>
+            <button ng-click="ctrl.decrement()"> -1</button>
             
+        </div>
+        <hr>
+        <div class="container" ng-controller="MeanController2 as ctrl2" ng-cloak>
+            {{ ctrl2.animal }}
+            <div ng-controller="MeanController3 as ctrl3" ng-cloak>
+                {{ ctrl3.animal }}
+            </div>
         </div>
         <script src="./node_modules/angular/angular.min.js"></script>
         <script src="./node_modules/angular-route/angular-route.min.js"></script>
